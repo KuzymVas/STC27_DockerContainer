@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title> JSF Table of Environmental variables</title>
+</h:head>
+<h:body>
+    <p:dataTable var="envVar" value="#{envVarsJSFController.envVars}"
+                 lazy="false"  paginatorAlwaysVisible="false"
+                 rows = "10" clientCache="true" paginator="true">
+        <f:facet name="header">
+           Environmental variables
+        </f:facet>
+        <p:column headerText="Name">
+            <h:outputText value="#{envVar.name}"/>
+        </p:column>
+
+        <p:column headerText="Value">
+            <h:outputText value="#{envVar.value}"/>
+        </p:column>
+    </p:dataTable>
+</h:body>
+</html>

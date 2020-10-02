@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<head>
+    <title>Info Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<h1>How To:</h1>
+<p> To access environment variables via REST service:</p>
+<ul>
+    <li>Go to <a href="/env">/env</a> to see the list of all environment variables</li>
+    <li><a href="/env?name=JAVA_HOME">/env?name=JAVA_HOME</a> allows you to query a value of a single environment variable JAVA_HOME</li>
+    <li><a href="/env/JAVA_HOME">/env/JAVA_HOME</a>  is another way to access value of the environment variable JAVA_HOME</li>
+</ul>
+<p> To list environment variables as a JSF PrimeFaces datatable, use link:<a href="env-vars.xhtml"> JSF page</a></p>
+<p> To list environment variables as a JSP html table, use link:<a href="env-vars.jsp"> JSP page</a></p>
+</body>
 </html>
